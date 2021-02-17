@@ -6,11 +6,15 @@ function sumExists(xy, k) {
   // check for that number in hashmap(Map)
   // if that number exist return true
   let numbersMap = new Map();
-  xy.forEach((x) => {
-    let difference = k - x;
-    if (difference) {
-      let exists = numbersMap.get(difference);
+ 
+  for(let i = 0; i < xy.length; i++){
+    let mapLocation = xy[i].toString();
+    let difference = k - xy[i];
+    if(numbersMap.get(difference.toString())){
+      return true
+    } else {
+      numbersMap.set(mapLocation, xy[i])
     }
-  });
-  return false;
+  }
+  return false
 }
