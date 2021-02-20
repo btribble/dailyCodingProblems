@@ -1,6 +1,3 @@
-//Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
-//E.X. given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
-
 function sumExists(xy, k) {
   // get the difference of the current number
   // check for that number in hashmap(Map)
@@ -18,3 +15,16 @@ function sumExists(xy, k) {
   }
   return false
 }
+
+function test(){
+  const actual = sumExists([10, 15, 3, 7], 17)
+  const expected = true
+  if(actual != expected){
+    console.log('TEST FAILED')
+  } else {
+    console.log('TEST PASSED')
+  }
+  return
+}
+
+test();
